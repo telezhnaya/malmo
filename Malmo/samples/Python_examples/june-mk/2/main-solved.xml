@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns="http://ProjectMalmo.microsoft.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <About>
+        <Summary>Hello world!</Summary>
+    </About>
+    <ServerSection>
+        <ServerHandlers>
+            <!-- http://www.minecraft101.net/superflat/ -->
+            <FlatWorldGenerator generatorString="3;7,44*49,73,35:1,159:4,95:13,35:13,159:11,95:10,159:14,159:6,35:6,95:6;12;lake,lava_lake" />
+            <DrawingDecorator>
+                <DrawSphere x="-60" y="70" z="0" radius="30" type="air"/>
+                <DrawSphere x="-60" y="80" z="30" radius="10" type="wool" colour="YELLOW"/>
+                <DrawCuboid x1="-50" y1="80" z1="30" x2="-70" y2="70" z2="20" type="air"/>
+                <DrawSphere x="-60" y="75" z="25" radius="2" type="wool" colour="WHITE"/>
+                <DrawSphere x="-60" y="68" z="18" radius="2" type="wool" colour="MAGENTA"/>
+                <DrawSphere x="-60" y="61" z="11" radius="2" type="wool" colour="PURPLE"/>
+                <DrawSphere x="-60" y="54" z="4" radius="2" type="wool" colour="PINK"/>
+            </DrawingDecorator>
+            <ServerQuitFromTimeUp timeLimitMs="30000" />
+            <ServerQuitWhenAnyAgentFinishes />
+        </ServerHandlers>
+    </ServerSection>
+    <!--AgentSection mode="Survival"-->
+    <AgentSection mode="Creative">
+        <Name>MalmoTutorialBot</Name>
+        <AgentStart>
+            <Placement x="7" y="56" z="10" yaw="90"/>
+        </AgentStart>
+        <AgentHandlers>
+            <ObservationFromFullStats />
+            <ContinuousMovementCommands turnSpeedDegs="180" />
+        </AgentHandlers>
+    </AgentSection>
+</Mission>
