@@ -4,6 +4,9 @@
         <Summary>Hello world!</Summary>
     </About>
     <ServerSection>
+        <ServerInitialConditions>
+            <Weather>rain</Weather>
+        </ServerInitialConditions>
         <ServerHandlers>
             <!-- http://www.minecraft101.net/superflat/ -->
             <FlatWorldGenerator generatorString="3;1*minecraft:bedrock,7*minecraft:dirt,1*minecraft:grass;6;village(size=113 distance=9),mineshaft(chance=1),stronghold(chance=1 count=12 spread=3),biome_1(distance=18),dungeon,decoration,lake,lava_lake" />
@@ -11,8 +14,7 @@
             <ServerQuitWhenAnyAgentFinishes />
         </ServerHandlers>
     </ServerSection>
-    <!--AgentSection mode="Survival"-->
-    <AgentSection mode="Creative">
+    <AgentSection mode="Survival">
         <Name>MalmoTutorialBot</Name>
         <AgentStart />
         <AgentHandlers>
