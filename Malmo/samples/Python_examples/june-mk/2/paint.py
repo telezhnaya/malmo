@@ -38,7 +38,7 @@ if agent_host.receivedArgument("help"):
     exit(0)
 
 # Default mission settings
-mission_file = './main.xml'
+mission_file = './paint.xml'
 with open(mission_file, 'r') as f:
     print "Loading mission from %s" % mission_file
     mission_xml = f.read()

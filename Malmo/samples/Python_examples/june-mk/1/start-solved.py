@@ -39,7 +39,7 @@ if agent_host.receivedArgument("help"):
     exit(0)
 
 # Default mission settings
-mission_file = './main-solved.xml'
+mission_file = './start-solved.xml'
 with open(mission_file, 'r') as f:
     print "Loading mission from %s" % mission_file
     mission_xml = f.read()
@@ -76,7 +76,18 @@ print "Mission running ",
 while world_state.is_mission_running:
     sys.stdout.write(".")
 
-    time.sleep(0.1)
+    time.sleep(0.2)
+    #agent_host.sendCommand("pitch 0")
+    agent_host.sendCommand("move 1")
+    direction = 1 # if random.choice([True, False]) else -1
+    agent_host.sendCommand("turn " + str(direction))
+    #agent_host.sendCommand("pitch " + str(random.uniform(-0.3, 0.3)))
+    my_cmd = "jump 1" # if random.choice([True, False]) else "crouch 1"
+    agent_host.sendCommand(my_cmd)
+    time.sleep(0.05)
+    agent_host.sendCommand(my_cmd[:-1] + "0")
+    agent_host.sendCommand("turn 0")
+
     # insert your code here :)
 
     world_state = agent_host.getWorldState()
