@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission xmlns="http://ProjectMalmo.microsoft.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <About>
+        <Summary>Hello world!</Summary>
+    </About>
+    <ServerSection>
+        <ServerInitialConditions>
+            <Time>
+                <StartTime>1000</StartTime>
+                <AllowPassageOfTime>false</AllowPassageOfTime>
+            </Time>
+            <Weather>rain</Weather>
+        </ServerInitialConditions>
+        <ServerHandlers>
+            <DefaultWorldGenerator />
+            <ServerQuitFromTimeUp timeLimitMs="30000" />
+            <ServerQuitWhenAnyAgentFinishes />
+        </ServerHandlers>
+    </ServerSection>
+    <AgentSection mode="Survival">
+        <Name>MalmoTutorialBot</Name>
+        <AgentStart />
+        <AgentHandlers>
+            <ObservationFromFullStats />
+            <ContinuousMovementCommands turnSpeedDegs="180" />
+        </AgentHandlers>
+    </AgentSection>
+</Mission>
