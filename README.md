@@ -1,5 +1,15 @@
 # Malmö #
 
+## Инструкция по установке на ОС Windows ##
+1. Скачайте архив по [этой ссылке](https://github.com/telezhnaya/malmo/blob/master/Malmo/Malmo-0.21.0-Windows-64bit.zip) и распакуйте его
+2. Откройте PowerShell в режиме администратора, введите команду `Set-ExecutionPolicy -Scope CurrentUser Unrestricted`
+3. Убедитесь, что на Вашем компьютере не установлен Python и JDK, не установлены переменные переменные окружения `JAVA_HOME` и т.п. Если они установлены - удалите их. Так вы сильно сэкономите себе время и упростите процесс установки. В ходе установки нужные версии Java и Python2 поставятся самостоятельно
+4. cd $env:HOMEPATH\Malmo-0.21.0-Windows-64bit\scripts
+5. .\malmo_install.ps1
+6. cd $env:HOMEPATH\Malmo-0.21.0-Windows-64bit\Minecraft
+7. .\launchClient.bat
+Последний процесс поднимает сервер, но при первом запуске он также устанавливает всё оставшееся. Приблизительно спустя час в отдельном окне вы должны увидеть запустившийся клиент игры с начальным меню (в терминале в этот момент будет написано Building 95%, это не должно вас смущать). Если всё так - поздравляю, вы справились :)
+
 Project Malmö is a platform for Artificial Intelligence experimentation and research built on top of Minecraft. We aim to inspire a new generation of research into challenging new problems presented by this unique environment.
 
 [![Join the chat at https://gitter.im/Microsoft/malmo](https://badges.gitter.im/Microsoft/malmo.svg)](https://gitter.im/Microsoft/malmo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://travis-ci.org/Microsoft/malmo.svg?branch=master)](https://travis-ci.org/Microsoft/malmo) [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/Microsoft/malmo/blob/master/LICENSE.txt)
