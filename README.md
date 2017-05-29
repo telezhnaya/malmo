@@ -13,7 +13,7 @@
 
 ## UPD для тех, кто забыл/не успел ##
 Я крайне рекомендую подготовиться заранее и поставить все локально, вам будет комфортнее. Но все же:
-1. Зайдите на [Azure портал](portal.azure.com) и откройте терминал (кнопка сверху)
+1. Зайдите на [Azure портал](https://portal.azure.com) и откройте терминал (кнопка сверху)
 2. `git clone git@github.com:telezhnaya/june-mc.git`
 3. `cd june-mc/`
 4. `./deploy-malmo-vm.sh <resource group name> <vm name>`
