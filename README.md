@@ -13,13 +13,14 @@
 
 ## UPD для тех, кто забыл/не успел ##
 Я крайне рекомендую подготовиться заранее и поставить все локально, вам будет комфортнее. Но все же:
-1. Зайдите на [Azure портал](portal.azure.com)`и откройте терминал (кнопка сверху)
+1. Зайдите на [Azure портал](portal.azure.com) и откройте терминал (кнопка сверху)
 2. `git clone git@github.com:telezhnaya/june-mc.git`
 3. `cd june-mc/`
 4. `./deploy-malmo-vm.sh <resource group name> <vm name>`
 5. Зайдите в полученную виртуалку, логин `malmo`, пароль `MinecraftAI1234` и откройте PowerShell
 6. `cd C:\malmomc\Malmo-0.21.0-Windows-64bit\Minecraft\`
 7. `.\launchClient.bat`
+
 
 Project Malmö is a platform for Artificial Intelligence experimentation and research built on top of Minecraft. We aim to inspire a new generation of research into challenging new problems presented by this unique environment.
 
